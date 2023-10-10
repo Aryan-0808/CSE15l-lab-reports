@@ -2,7 +2,7 @@
 
 ## cd
 
-![image](cdEmpty.png)
+![image](cdempty.png)
 When I run the cd command empty, it does nothing
 It was run in /home which was the working directory when the command was run
 cd is a command used to put us into directory which becomes the new working directory and as we didnt state any file name, it didnt change the working directory.
