@@ -66,13 +66,13 @@ This time when we run the command, it puts us into a space which concats anythin
 It is not an error but it is also not the desired outcome  
   
 ![image](catdirectory.png)  
-When I run the command it gives us all the components of the directory lecture1  
+When I run the command it gives us all the components of the file or directory and in this case a directory lecture1  
 It was run in `/home` which is the working directory when the command was run  
 It gives us the components of the given file or directory and thats exactly what I got  
 It is not an error  
   
 ![image](catfile.png)  
-When I run the command it gives me the components of the given file  
+When I run the command it gives me the components of the given file or directory and in thsi case it gives us the components of 
 It was run in `/home` which is the working directory when the command was run  
 It gives us whats in the file like Hello World! which is in the en-us.txt   
 The time when we run the command, it gives us the concatinated files.  
