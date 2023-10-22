@@ -7,7 +7,13 @@ When I run the cd command empty, it does nothing
 It was run in /home which was the working directory when the command was run  
 cd is a command used to put us into directory which becomes the new working directory and as we didnt   state any file name, it didnt change the working directory.  
 it is not an error  
-  
+
+![image](cd_empty_1.png)
+When I run the cd command empty, it sends me back to home from the lecture 1 directory  
+It was run in the /home/lecture1 directory.  
+cd is a command used to put us into directory which becomes the new working directory and as we didnt   state any file name, it didnt change the working directory.  
+It is not an error  
+
 ![image](cddirectory.png)  
 When I run the command, it puts me into a new directory which is the new working directory  
 It was run in /home which was the working directory when the command was run  
