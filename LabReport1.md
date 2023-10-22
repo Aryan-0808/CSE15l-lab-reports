@@ -72,7 +72,7 @@ It gives us the components of the given file or directory and thats exactly what
 It is not an error  
   
 ![image](catfile.png)  
-When I run the command it gives me the components of the given file or directory and in thsi case it gives us the components of 
+When I run the command it gives me the components of the given file or directory and in thsi case it gives us the components of files en-us.txt in lecture 1 and zh-ch.txt in lecture 2  
 It was run in `/home` which is the working directory when the command was run  
 It gives us whats in the file like Hello World! which is in the en-us.txt   
 The time when we run the command, it gives us the concatinated files.  
