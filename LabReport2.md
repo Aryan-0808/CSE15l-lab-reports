@@ -3,8 +3,8 @@
 ### code  
 ![image](code.png)  
 ### Server  
-![image](hello.jpeg)  
-![image](hello1jpeg)  
+![image](hello.png)  
+![image](hello1png)  
 In the screenshot, I used `handleRequest`
 In this, I used a `url` which is from the URI class, I use the port number 1924, then it becomes localhost:1924/ and   
 then I did localhost:1924/add-message?s=Hello  
