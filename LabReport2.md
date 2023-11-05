@@ -24,7 +24,7 @@ To know how to make the next thing added go to the next line, I use the `"/n"` c
 ### Logging into ieng6 account without password  
 ![image](remotelogin.png)  
 ### Public path  
-![image](publicpath.png)  
+![image](PublicPath1.png)  
 ### Private path  
 ![image](privatepath.png)
 
