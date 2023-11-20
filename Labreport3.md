@@ -15,10 +15,10 @@ public void testReverseInPlace() {
 }`
 ## Output  
 input : {1,2,3}  
-![image](beforeBugFix.png)  
+![image](beforeFixBug.png)  
 
 input : { 3 }  
-![image](afterBugFix.png)  
+![image](afterFixBug.png)  
 
 ## Bug  
 ### before  
