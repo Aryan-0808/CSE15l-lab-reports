@@ -12,10 +12,150 @@ I went into `ListExamples.java`, and looked at the various while loops and there
 loop to `index2`. There was an error because the iterator being used for the second list was `index2` but instead it was incrementing `index1`. Below is the tests running successfully.
 
 ## Information to understand the files 
-Repository structure
-- lab7
-  - ListExamples.java
-  - ListExamplesTests.java
-  - test.sh
-  - lib
-     - 
+- Repository structure
+  - lab7
+    - ListExamples.java
+    - ListExamplesTests.java
+    - test.sh
+    - lib
+      - hamcrest-core-1.3.jar
+      - junit-4.13.2.jar
+
+- Contents of ListExamples.java before fixing the bug
+```
+import java.util.ArrayList;
+import java.util.List;
+
+interface StringChecker { boolean checkString(String s); }
+
+class ListExamples {
+
+  // Returns a new list that has all the elements of the input list for which
+  // the StringChecker returns true, and not the elements that return false, in
+  // the same order they appeared in the input list;
+  static List<String> filter(List<String> list, StringChecker sc) {
+    List<String> result = new ArrayList<>();
+    for(String s: list) {
+      if(sc.checkString(s)) {
+        result.add(0, s);
+      }
+    }
+    return result;
+  }
+
+
+  // Takes two sorted list of strings (so "a" appears before "b" and so on),
+  // and return a new list that has all the strings in both list in sorted order.
+  static List<String> merge(List<String> list1, List<String> list2) {
+    List<String> result = new ArrayList<>();
+    int index1 = 0, index2 = 0;
+    while(index1 < list1.size() && index2 < list2.size()) {
+      if(list1.get(index1).compareTo(list2.get(index2)) < 0) {
+        result.add(list1.get(index1));
+        index1 += 1;
+      }
+      else {
+        result.add(list2.get(index2));
+        index2 += 1;
+      }
+    }
+    while(index1 < list1.size()) {
+      result.add(list1.get(index1));
+      index1 += 1;
+    }
+    while(index2 < list2.size()) {
+      result.add(list2.get(index2));
+      // change index1 below to index2 to fix test
+      index1 += 1;
+    }
+    return result;
+  }
+
+
+}
+```
+- contents of ListExamples.java after fixing the bug
+```
+import java.util.ArrayList;
+import java.util.List;
+
+interface StringChecker { boolean checkString(String s); }
+
+class ListExamples {
+
+  // Returns a new list that has all the elements of the input list for which
+  // the StringChecker returns true, and not the elements that return false, in
+  // the same order they appeared in the input list;
+  static List<String> filter(List<String> list, StringChecker sc) {
+    List<String> result = new ArrayList<>();
+    for(String s: list) {
+      if(sc.checkString(s)) {
+        result.add(0, s);
+      }
+    }
+    return result;
+  }
+
+
+  // Takes two sorted list of strings (so "a" appears before "b" and so on),
+  // and return a new list that has all the strings in both list in sorted order.
+  static List<String> merge(List<String> list1, List<String> list2) {
+    List<String> result = new ArrayList<>();
+    int index1 = 0, index2 = 0;
+    while(index1 < list1.size() && index2 < list2.size()) {
+      if(list1.get(index1).compareTo(list2.get(index2)) < 0) {
+        result.add(list1.get(index1));
+        index1 += 1;
+      }
+      else {
+        result.add(list2.get(index2));
+        index2 += 1;
+      }
+    }
+    while(index1 < list1.size()) {
+      result.add(list1.get(index1));
+      index1 += 1;
+    }
+    while(index2 < list2.size()) {
+      result.add(list2.get(index2));
+      // change index1 below to index2 to fix test
+      index2 += 1;
+    }
+    return result;
+  }
+
+
+}
+```
+To fix the bug, you have to change the last while loop in line 44. You need to change `index1` to `index2`. Now all the tests pass.
+- Contents of ListExamplesTests.java
+```
+import static org.junit.Assert.*;
+import org.junit.*;
+import java.util.*;
+import java.util.ArrayList;
+
+
+public class ListExamplesTests {
+	@Test(timeout = 500)
+	public void testMerge1() {
+    		List<String> l1 = new ArrayList<String>(Arrays.asList("x", "y"));
+		List<String> l2 = new ArrayList<String>(Arrays.asList("a", "b"));
+		assertArrayEquals(new String[]{ "a", "b", "x", "y"}, ListExamples.merge(l1, l2).toArray());
+	}
+	
+	@Test(timeout = 500)
+        public void testMerge2() {
+		List<String> l1 = new ArrayList<String>(Arrays.asList("a", "b", "c"));
+		List<String> l2 = new ArrayList<String>(Arrays.asList("c", "d", "e"));
+		assertArrayEquals(new String[]{ "a", "b", "c", "c", "d", "e" }, ListExamples.merge(l1, l2).toArray());
+        }
+
+}
+```
+- contents of test.sh
+```
+javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java
+java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListExamplesTests
+```
+The command I used in the terminal to run test.sh to run the tests was `bash test.sh` which triggers the commands in the test.sh file.  
