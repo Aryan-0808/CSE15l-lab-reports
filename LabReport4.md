@@ -39,6 +39,11 @@ I ran this to check if all my tests ran successfully after the changes.
 
 ## Pushing the changes  
 ![image](commitChanges.png)  
-Command:  ```git add .  git commit -m "Changed"  git push```
+Command:  
+```
+git add .
+git commit -m "Changed"
+git push
+```
 This was used to make sure that the changes were made on the forked repository on my github. In the screenshot below shows the changes commited. Towards the end of the screenshot is the changed line.  
 ![image](changedCode.png)  
