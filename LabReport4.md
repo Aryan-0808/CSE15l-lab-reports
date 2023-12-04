@@ -1,7 +1,7 @@
 # Lab Report 4 - VIM  
 ## Logging into ieng6  
 ![image](LoggingIn.png)
-Command:  ```ssh cs15lfa23lv@ieng6.ucsd.edu```
+Command:  ```ssh cs15lfa23lv@ieng6.ucsd.edu```  
 I looked for the command in lab 2 and i changed the last 2 letters to log into my own account.  
 
 ## Cloning the fork of the repository  
