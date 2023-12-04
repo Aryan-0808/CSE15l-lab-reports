@@ -25,12 +25,12 @@ I entered the directory like this and ran the tests.
 ![image](changedVim.png)  
 Command:  ```vim ListExamples.java```
 
-I used <k> and <l> to move to the lines where i had to change the code.  
-<k> to move down in vim editor   
-<l> to move right in vim editor  
-Once i reached the line, I used <x> to remove 1 from the line i had to remove it from  
-Then after removing 1, I used <i> to insert 2 into the same line in place of 1  
-To get out of the insert mode, I used <ESC> which put me in normal mode  
+I used `<k>` and `<l>` to move to the lines where i had to change the code.  
+`<k>` to move down in vim editor   
+`<l>` to move right in vim editor  
+Once i reached the line, I used `<x>` to remove 1 from the line i had to remove it from  
+Then after removing 1, I used `<i>` to insert 2 into the same line in place of 1  
+To get out of the insert mode, I used `<ESC>` which put me in normal mode  
 Then in normal mode i type `:wq` to save the changes I made in the vim editor to `ListExamples.java`  
 ## Running the Tests  
 ![image](changedTest.png)  
