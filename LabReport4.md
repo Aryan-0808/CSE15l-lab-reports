@@ -11,12 +11,15 @@ I used this command to git clone my repository which i forked
 
 
 ## Running the Tests  
-![image](runningTest.png)
-Command ```ls  cd lab7  ls  bash test.sh```
+![image](runningTest.png)  
+Command ```ls  
+cd lab7  
+ls  
+bash test.sh```
 I entered the directory like this and ran the tests.  
 ## Editing code to make sure the tests succeed  
 
-![image](changedVim.png)
+![image](changedVim.png)  
 Command:  ```vim ListExamples.java```
 
 I used <k> and <l> to move to the lines where i had to change the code.  
@@ -27,12 +30,12 @@ Then after removing 1, I used <i> to insert 2 into the same line in place of 1
 To get out of the insert mode, I used <ESC> which put me in normal mode  
 Then in normal mode i type `:wq` to save the changes I made in the vim editor to `ListExamples.java`  
 ## Running the Tests  
-![image](changedTest.png)
+![image](changedTest.png)  
 Command:  ```bash test.sh```  
 I ran this to check if all my tests ran successfully after the changes.  
 
 ## Pushing the changes  
-![image](commitChanges.png)
+![image](commitChanges.png)  
 Command:  ```git add .  git commit -m "Changed"  git push```
 This was used to make sure that the changes were made on the forked repository on my github. In the screenshot below shows the changes commited. Towards the end of the screenshot is the changed line.  
-![image](changedCode.png)
+![image](changedCode.png)  
