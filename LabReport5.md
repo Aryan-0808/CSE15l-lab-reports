@@ -159,3 +159,6 @@ javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java
 java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListExamplesTests
 ```
 The command I used in the terminal to run test.sh to run the tests was `bash test.sh` which triggers the commands in the test.sh file.  
+# Reflection
+I learned a lot in the second half of the quarter in CSE 15L, I got closer to my lab partners and started looking forward to going to labs rather than going to them like my classes (a chore). 
+I also learned a lot about using terminal commands and other things in general. We did scripts, and vim and a bunch of command line operations. I loved the vim section and I found it really cool. I struggled a little bit with scripts and I think it should have been focused on slightly more as it was the only difficuly topic for me. I believe that  scripts was hard for me because I didnt attend that lab as I was sick. All the other concepts I attended lab for was clear to me. I think lab is a very important part and a fun part of this course and you shouldnt remove it.
