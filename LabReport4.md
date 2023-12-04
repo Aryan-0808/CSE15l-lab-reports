@@ -12,7 +12,7 @@ I used this command to git clone my repository which i forked
 
 ## Running the Tests  
 ![image](runningTest.png)  
-Command ```ls  
+Command  ```ls  
 cd lab7  
 ls  
 bash test.sh```
